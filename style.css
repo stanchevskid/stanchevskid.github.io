@@ -95,12 +95,34 @@ body{
 }
 #box2 {
     width: 90%;
-    background-color: white;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    color: #f43f44;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 #box2 div:nth-of-type(2){
     height: 200px;
+}
+#box2 div{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 20%;
+}
+#color{
+    background-color: #00f453 !important;
+    width: 100px !important;
+    height: 100px;
+    margin: auto;
+    color: #00f453;
+    border-radius: 50px;
+}
+#box2 h1{
+    font-size: 40px;
+    margin-top: 30px;
+    color: black;
+    text-shadow: 6px 6px #f43f44;
+}
+audio{
+    margin-top: 15px;
 }
