@@ -36,7 +36,7 @@ body{
 }
 #header li{
     display:inline-block;
-    padding: 7px 45px 0 45px;
+    padding: 7px 2em 0 2em;
 }
 #header li a{
     text-decoration: none;
