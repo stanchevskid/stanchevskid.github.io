@@ -69,13 +69,13 @@ body{
 #box{
     background-color: #caebf2;
     width: 50%;
-    height: 324px;
+    height: 320px;
     margin: auto;
     padding-top: 60px;
 }
 #box div{
     float: right;
-    width: 58%;
+    width: 60%;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
     padding: 0 60px 0 0;
@@ -83,7 +83,7 @@ body{
     text-indent: 40px;
 }
 #box img{
-    width: 34%;
+    height: 320px;
 }
 #space{
     margin-top: 50px;
@@ -91,7 +91,7 @@ body{
 #box div img{
     height: 100px;
     float: right;
-    margin-top: -28px;
+    margin-top: -35px;
 }
 #box2 {
     width: 90%;
