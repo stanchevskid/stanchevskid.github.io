@@ -17,8 +17,12 @@ body{
     padding: 5px;
     border: 1px solid black;
 }
+#logo a{
+    text-decoration: none;
+    color: black;
+}
 #logo h1 span:first-of-type{
-    background-color: #f43f44;
+    background-color: #caebf2;
     color: white;
     padding:0 8px 0 8px;
 }
@@ -43,8 +47,15 @@ body{
     color: #a9a9a9;
     font-family: 'Montserrat', sans-serif;
 }
-#header a:hover{
+#header ul a:hover{
     color: #f43f44;
+}
+.selected {
+    background-color: #f43f44;
+    color: white !important;
+    padding: 8px 20px 8px 20px;
+    border-radius: 10px;
+    opacity: 80%;
 }
 #container h1{
     font-family: 'Montserrat', sans-serif;
@@ -58,6 +69,38 @@ body{
 #box{
     background-color: #caebf2;
     width: 50%;
-    height: 300px;
+    height: 320px;
     margin: auto;
+    padding-top: 60px;
+}
+#box div{
+    float: right;
+    width: 60%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    padding: 0 60px 0 0;
+    line-height: 1.5;
+    text-indent: 40px;
+}
+#box img{
+    height: 320px;
+}
+#space{
+    margin-top: 50px;
+}
+#box div img{
+    height: 100px;
+    float: right;
+    margin-top: -35px;
+}
+#box2 {
+    width: 90%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+#box2 div:nth-of-type(2){
+    height: 200px;
 }
