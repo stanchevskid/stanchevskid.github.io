@@ -261,13 +261,17 @@ progress[value]::-webkit-progress-bar {
 #strengths li:nth-of-type(2n){
     border: 1px #f43f44 solid;
 }
-#facebook{
-    background-image: url("images/facebook-icon.png");
-    height: 50px;
+#facebook, #mail, #github{
+    background-color: black;
+    display: inline-block;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
 }
-#facebook:hover{
-    background-image: url("images/facebook-icon-hover.png");
-    height: 413px;
+#facebook:hover, #mail:hover, #github:hover{
+    background-color: #f43f44;
+    transition: ease;
+    transition-duration: 0.2s;
 }
 form{
     top: -300px;
