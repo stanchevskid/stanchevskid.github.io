@@ -195,7 +195,7 @@ footer p{
     list-style: none;
 }
 #certificates ul:first-of-type{
-    width: 48%;
+    width: 46%;
     display: inline-block;
 }
 #certificates li{
@@ -206,11 +206,52 @@ footer p{
 
 }
 #certificates ul:last-of-type {
-    width: 45%;
+    width: 44%;
     float: right;
 }
 dd{
     margin-top: -15px;
     margin-bottom: 20px;
     color: #f43f44;
+}
+#languages h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    width: 170px;
+}
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    width: 160px;
+}
+progress[value]::-webkit-progress-value {
+     background-color: #f43f44;
+ }
+progress[value]::-webkit-progress-bar {
+    background-color: #a9a9a9;
+}
+#languages div{
+    display: inline-block;
+}
+#languages>div{
+    display: flex;
+    justify-content: space-between;
+}
+#languages>div div:not(div:first-of-type){
+    margin-top: 23px;
+}
+#strengths{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+#strengths li{
+    border: 1px black solid;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+}
+#strengths li:nth-of-type(2n){
+    border: 1px #f43f44 solid;
 }
