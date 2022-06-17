@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dejan's Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <div id="logo">
+            <a href="index.html">
+                <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
+            </a>
+        </div>
+        <ul>
+            <li><a href="index.html">About</a> </li>
+            <li><a href="education.html">Education</a> </li>
+            <li><a href="skills.html">Skills</a> </li>
+            <li><a href="contact.html" class="selected">Contact</a> </li>
+        </ul>
+    </div>
+    <video src="images/contactme.mp4" autoplay loop width="60%" muted></video>
+    <form action="https://formspree.io/f/mayvkrvy" method="post">
+        <div id="left">
+            <label>
+                <h3>Name:</h3>
+                <input type="text" name="Name" required>
+            </label>
+            <label>
+                <h3>Surname:</h3>
+                <input type="text" name="Surname" required>
+            </label>
+            <label>
+                <h3>E-mail:</h3>
+                <input type="email" placeholder="janedoe@example.com" required name="E-mail">
+            </label>
+            <input type="submit" id="button">
+        </div>
+       <div id="right">
+           <label>
+               <h3>Your message:</h3>
+               <textarea rows="16" cols="70" name="Message">Your message goes here..</textarea>
+           </label>
+
+       </div>
+    </form>
+</div>
+<br style="clear: both">
+<footer>
+    <div>
+        <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
+            <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
+        </a>
+    </div>
+    <div>
+        <a href="https://github.com/stanchevskid" target="_blank" id="github">
+            <img src="images/github.png" alt="github icon " width="30px">
+        </a>
+    </div>
+    <div>
+        <a href="mailto:stanchevskidejan@gmail.com">
+            <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
+        </a>
+    </div>
+    <hr>
+    <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
+</footer>
+</body>
+</html>
