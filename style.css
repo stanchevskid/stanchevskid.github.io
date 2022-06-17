@@ -244,6 +244,7 @@ progress[value]::-webkit-progress-bar {
 #strengths{
     list-style: none;
     font-family: 'Montserrat', sans-serif;
+    margin-left: -45px;
 }
 #strengths li{
     border: 1px black solid;
