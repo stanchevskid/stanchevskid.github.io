@@ -8,7 +8,7 @@ body{
     background-color: white;
     height: 4em;
     position: fixed;
-    z-index: 100;
+    z-index: 120;
     width: 100%;
     box-shadow: 0 0 20px rgb(0 0 0 / 25%);
 }
@@ -74,7 +74,7 @@ body{
 }
 
 #box{
-    background-color: #caebf2;
+    background-color: white;
     width: 60%;
     height: 320px;
     margin: auto;
@@ -105,9 +105,13 @@ body{
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-    color: #f43f44;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+}
+#box2 h2{
+    border-bottom: 5px solid #f43f44;
+    display: inline-block;
 }
 #box2 div:nth-of-type(2){
     height: 200px;
@@ -142,6 +146,7 @@ footer{
     /*position: absolute;*/
     /*bottom: 0;*/
     width: 100%;
+    box-shadow: 0 0 20px rgb(0 0 0 / 25%);
 }
 footer div{
     display: inline-block;
@@ -326,6 +331,8 @@ textarea{
 }
 #button:hover{
     background-color: black;
+    transition: ease;
+    transition-duration: 0.2s;
 }
 #contactme{
     margin-top: 120px;
@@ -350,3 +357,75 @@ video{
     position: relative;
     top: -60px;
 }
+.popup{
+    width: 35%;
+    height: 45%;
+    background-color: white;
+    position:absolute;
+    top: 5%;
+    left: 35%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+    display: flex;
+    align-items: center;
+}
+.popup div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup img{
+    width: 15%;
+}
+.popup h1{
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 5px solid #f43f44;
+    font-size: 3.5em;
+    margin:0;
+}
+.popup h3{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.popup a{
+    background-color: black;
+    border-color: transparent;
+    color: #f5f3f3;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20%;
+    padding:10px 0 10px 0;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+.popup a:hover{
+    background-color: #f43f44;
+    transition: ease;
+    transition-duration: 0.4s;
+}
+.mess-logo{
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#message-footer{
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#message-footer p{
+    margin-top: 0;
+    margin-left: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+
