@@ -23,7 +23,8 @@
         </ul>
     </div>
     <video src="images/contactme.mp4" autoplay loop width="60%" muted></video>
-    <form action="message.html" method="get" class="myForm">
+    <form action="https://api.web3forms.com/submit" method="post"  class="myForm">
+        <input type="hidden" name="access_key" value="6c972a14-46fd-4c2e-abf9-8729c1e80e93">
         <div id="left">
             <label>
                 <h3>Name:</h3>
@@ -37,7 +38,8 @@
                 <h3>E-mail:</h3>
                 <input type="email" placeholder="janedoe@example.com" required name="E-mail">
             </label>
-            <input type="submit" id="button">
+            <input type="hidden" name="redirect" value="https://stanchevskid.github.io/message.html">
+            <button type="submit" id="button">Submit</button>
         </div>
        <div id="right">
            <label>
@@ -68,5 +70,10 @@
     <hr>
     <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
 </footer>
+<script>
+    function showMessage() {
+        window.location.href="message.html";
+    }
+</script>
 </body>
 </html>
