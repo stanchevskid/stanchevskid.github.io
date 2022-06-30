@@ -6,74 +6,113 @@
     <title>Dejan Stanchevski - About</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>
-    <div id="main" class="homescreen">
-        <div id="header">
-            <div id="logo">
-                <a href="index.html">
+<!--<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>-->
+<div id="main" class="homescreen">
+    <div id="header">
+        <div id="logo">
+            <a href="index.html">
                 <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
-                </a>
-            </div>
-            <ul>
-                <li><a class="selected" href="index.html">About</a> </li>
-                <li><a href="education.html">Education</a> </li>
-                <li><a href="skills.html">Skills</a> </li>
-                <li><a href="contact.html">Contact</a> </li>
-            </ul>
+            </a>
         </div>
+        <ul>
+            <li><a class="selected" href="index.html">About</a> </li>
+            <li><a href="education.html">Education</a> </li>
+            <li><a href="skills.html">Skills</a> </li>
+            <li><a href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+    <br>
+    <div id="welcome-container" onended="pageScroll()">
+            <span>
+                <h1>Hi, I'm <span style="color: #f43f44">Dejan</span>.
+                Welcome to my personal portfolio.</h1>
+            </span>
         <br>
-        <div id="container">
-            <h1>WHO AM I?</h1>
-            <div id="box">
-                <img src="images/dejan.png" alt="Photo of Dejan">
-                <div>
-                    <p>Lorem Ipsum is simply dummy <span style="color: #f43f44"> text</span> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <span style="color: #f43f44">It has survived not only </span>five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of <span style="color: #f43f44">Letraset </span>sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <img src="images/random-signature.png" alt="signature">
+
+    </div>
+    <div id="container">
+
+        <div id="box">
+            <h1>ABOUT ME</h1>
+            <br>
+            <img src="images/dejan.png" alt="Photo of Dejan">
+            <div>
+                <p>Lorem Ipsum is simply dummy <span style="color: #f43f44"> text</span> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <span style="color: #f43f44">It has survived not only </span>five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of <span style="color: #f43f44">Letraset </span>sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<!--                <img src="images/random-signature.png" alt="signature">-->
+                <div id="box2">
+                    <div>
+                        <h2>AGE</h2>
+                        <span class="num" data-val="19">0</span>
+                    </div>
+                    <div>
+                        <h2>LOCATION</h2>
+                        <span>MACEDONIA</span>
+                    </div>
+                    <div>
+                        <h2>GENDER</h2>
+                        <span>MALE</span>
+                    </div>
                 </div>
-            </div>
-            <br><br><br>
-            <div id="box2">
-                <div>
-                    <h2>BORN:</h2>
-                    <h1>01.09.2002</h1>
-                </div>
-                <div>
-                    <h2>FAVORITE COLOR:</h2>
-                    <div id="color"> <p>aaa</p></div>
-                </div>
-                <div>
-                    <h2>FAVORITE SONG:</h2>
-                    <audio src="material/Noizu%20-%20Summer%2091%20(Looking%20Back).mp3" controls></audio>
-                </div>
+                <a href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">CV</a>
             </div>
         </div>
     </div>
-    <br>
-    <footer>
-        <div>
-            <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
-                <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
-            </a>
-        </div>
-        <div>
-            <a href="https://github.com/stanchevskid" target="_blank" id="github">
-                <img src="images/github.png" alt="github icon " width="30px">
-            </a>
-        </div>
-        <div>
-            <a href="mailto:stanchevskidejan@gmail.com">
-                <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
-            </a>
-        </div>
-        <hr>
-        <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
-    </footer>
+</div>
+<br>
+<footer>
+    <div>
+        <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
+            <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
+        </a>
+    </div>
+    <div>
+        <a href="https://github.com/stanchevskid" target="_blank" id="github">
+            <img src="images/github.png" alt="github icon " width="30px">
+        </a>
+    </div>
+    <div>
+        <a href="mailto:stanchevskidejan@gmail.com">
+            <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
+        </a>
+    </div>
+    <hr>
+    <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
+</footer>
 <script>
     function hide(){
         document.getElementById("welcome").style.display="none";
     }
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(years,4400)
+    });
+    function years(){
+        let valueDisplays=document.querySelectorAll(".num");
+        let interval=2000;
+        valueDisplays.forEach((valueDisplay)=>{
+            let startValue=0;
+            let endValue=parseInt(valueDisplay.getAttribute("data-val"));
+            let duration = Math.floor(interval/endValue);
+            let counter=setInterval(function broenje(){
+                startValue+=1;
+                valueDisplay.textContent=startValue;
+                if(startValue === endValue){
+                    clearInterval(counter);
+                }
+            }, duration);
+        });
+        function pageScroll() {
+            window.scrollBy(0,1);
+            scrolldelay = setTimeout(pageScroll,10);
+        }
+    }
+    $(document).ready(function () {
+        $('html, body').animate({
+            scrollTop: $('#scroll').offset().top
+        }, 'slow');
+    });
 </script>
 </body>
 </html>

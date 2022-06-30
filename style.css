@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Source+Code+Pro:wght@200&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');*/
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     background-color: #f5f3f3;
@@ -64,36 +67,74 @@ body{
     color: #f43f44 !important;
 }
 #container{
-   margin-top: 140px;
+    margin-top: 2%;
 }
-#container h1{
+#box>h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 5em;
     text-align: center;
-    color: white;
-    text-shadow: 8px 8px black;
-    margin-top: 0;
-    margin-bottom: -45px;
+    color: black;
+    margin-top: -50px;
+    margin-bottom: 0;
 }
-
+#welcome-container, #typewriter, #typewriter-s{
+    margin-top: 5%;
+    font-family: 'Source Code Pro', monospace;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+#welcome-container h1{
+    overflow: hidden;
+    border-right: .08em solid black;
+    white-space: nowrap;
+    font-size: 2.6em;
+    width: 0;
+    animation-delay: 4.5s !important;
+    animation: typing 3s steps(48, end) forwards,blink 1.5s infinite;
+}
+#typewriter-s h1{
+    animation: typing 1s steps(7, end) forwards,blink 1.5s infinite !important;
+}
+#typewriter h1, #typewriter-s h1{
+    overflow: hidden;
+    border-right: .08em solid black;
+    white-space: nowrap;
+    font-size: 2.6em;
+    width: 0;
+    animation-delay: 0.5s !important;
+    animation: typing 1s steps(9, end) forwards,blink 1.5s infinite;
+}
+#welcome-container span, #typewriter span, #typewriter-s span{
+    display: inline-block;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%;}
+}
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: black; }
+}
 #box{
     background-color: white;
-    width: 60%;
-    height: 320px;
+    width: 95%;
     margin: auto;
     padding-top: 60px;
+    height: fit-content;
 }
-#box div{
+#box>div{
     float: right;
     width: 60%;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    padding: 0 40px 0 0;
+    margin-top: 5em;
+    padding: 0 80px 0 0;
     line-height: 1.5;
-    text-indent: 40px;
+
 }
-#box img{
-    height: 320px;
+#box>div p{
+    text-indent: 40px;
 }
 #space{
     margin-top: 50px;
@@ -103,45 +144,42 @@ body{
     float: right;
     margin-top: -35px;
 }
+#box div a{
+    padding: 5px 0 0 5px;
+    font-size: 1.4em;
+    border-radius: 10px !important;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-top: 2em;
+    transform: translate(-50%, -50%);
+
+}
 #box2 {
-    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: auto;
     color: black;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+#box2 div span{
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    margin-left: 25px;
+}
+.num{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3em !important;
+    margin-left: 20px;
+}
 #box2 h2{
     border-bottom: 5px solid #f43f44;
     display: inline-block;
 }
-#box2 div:nth-of-type(2){
-    height: 200px;
-}
 #box2 div{
     background-color: rgb(255, 255, 255);
-    width: 25%;
-}
-#color{
-    background-color: #45d3f1 !important;
-    width: 100px !important;
-    height: 100px;
-    margin: auto;
-    color: #45d3f1;
-    border-radius: 50px;
-}
-#box2 h1{
-    font-size: 40px;
-    margin-top: 30px;
-    color: black;
-    text-shadow: none;
-    -webkit-text-stroke: 2px black;
-    -webkit-text-fill-color: white;
-}
-audio {
-    margin-top: 15px;
-
 }
 footer{
     height: 100px;
@@ -238,8 +276,8 @@ progress[value] {
     border:1px solid black;
 }
 progress[value]::-webkit-progress-value {
-     background-color: #000000;
- }
+    background-color: #000000;
+}
 progress[value]::-webkit-progress-bar {
     background-color: #ffffff;
 }
@@ -282,7 +320,7 @@ progress[value]::-webkit-progress-bar {
 }
 form{
     top: -300px;
-   padding: 100px 300px 100px 300px;
+    padding: 100px 300px 100px 300px;
     background-color: white;
     position: relative;
     z-index: 100;
@@ -390,7 +428,7 @@ video{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
-.popup a{
+.popup a, #box div a, #cv button{
     background-color: black;
     border-color: transparent;
     color: #f5f3f3;
@@ -404,7 +442,7 @@ video{
     text-decoration: none;
     text-align: center;
 }
-.popup a:hover{
+.popup a:hover, #box div a:hover, #cv button:hover{
     background-color: #f43f44;
     transition: ease;
     transition-duration: 0.4s;
@@ -413,14 +451,13 @@ video{
     position: fixed;
     left: 50%;
     bottom: 0;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 #message-footer{
     position: fixed;
     left: 50%;
     bottom: 0;
-    -webkit-transform: translate(-50%, -50%);
+
     transform: translate(-50%, -50%);
 }
 #message-footer p{
@@ -456,7 +493,7 @@ video{
         display: none;
     }
 }
-.homescreen{
-    animation: fadeIn 1s;
-    animation-delay: 3s;
-}
+/*.homescreen{*/
+/*    animation: fadeIn 2s;*/
+/*    animation-delay: 3s;*/
+/*}*/
