@@ -77,14 +77,14 @@ body{
     margin-top: -50px;
     margin-bottom: 0;
 }
-#welcome-container, #typewriter, #typewriter-s{
+#welcome-container, #typewriter, #typewriter-s, #welcome-container-a{
     margin-top: 5%;
     font-family: 'Source Code Pro', monospace;
     width: 100%;
     display: inline-block;
     text-align: center;
 }
-#welcome-container h1{
+#welcome-container h1, #welcome-container-a h1{
     overflow: hidden;
     border-right: .08em solid black;
     white-space: nowrap;
@@ -93,6 +93,9 @@ body{
     animation-delay: 4.5s !important;
     animation: typing 3s steps(48, end) forwards,blink 1.5s infinite;
 }
+#welcome-container-a h1{
+    animation-delay: 0.5s !important;
+ }
 #typewriter-s h1{
     animation: typing 1s steps(7, end) forwards,blink 1.5s infinite !important;
 }
@@ -105,7 +108,7 @@ body{
     animation-delay: 0.5s !important;
     animation: typing 1s steps(9, end) forwards,blink 1.5s infinite;
 }
-#welcome-container span, #typewriter span, #typewriter-s span{
+#welcome-container span, #typewriter span, #typewriter-s span, #welcome-container-a span{
     display: inline-block;
 }
 @keyframes typing {
