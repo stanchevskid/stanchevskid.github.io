@@ -493,7 +493,7 @@ video{
         display: none;
     }
 }
-/*.homescreen{*/
-/*    animation: fadeIn 2s;*/
-/*    animation-delay: 3s;*/
-/*}*/
+.homescreen{
+    animation: fadeIn 2s;
+    animation-delay: 3s;
+}

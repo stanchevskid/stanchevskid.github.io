@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-<!--<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>-->
+<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>
 <div id="main" class="homescreen">
     <div id="header">
         <div id="logo">
@@ -25,7 +25,7 @@
         </ul>
     </div>
     <br>
-    <div id="welcome-container" onended="pageScroll()">
+    <div id="welcome-container">
             <span>
                 <h1>Hi, I'm <span style="color: #f43f44">Dejan</span>.
                 Welcome to my personal portfolio.</h1>
@@ -103,16 +103,7 @@
                 }
             }, duration);
         });
-        function pageScroll() {
-            window.scrollBy(0,1);
-            scrolldelay = setTimeout(pageScroll,10);
-        }
     }
-    $(document).ready(function () {
-        $('html, body').animate({
-            scrollTop: $('#scroll').offset().top
-        }, 'slow');
-    });
 </script>
 </body>
 </html>
