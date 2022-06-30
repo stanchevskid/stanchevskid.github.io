@@ -39,6 +39,9 @@ body{
     min-height: calc(100vh - 64px - 100px);
     margin-bottom: 42px;
 }
+#main>div:not(#header){
+    animation: fadeIn 1s;
+}
 #header ul{
     float: right;
     list-style: none;
@@ -427,5 +430,33 @@ video{
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
-
-
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#welcome{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vmax;
+    z-index: 150;
+    animation: left 1s;
+    animation-delay: 3s;
+}
+@keyframes left {
+    from{
+        left: 0;
+    }
+    to{
+        left:-200%;
+        display: none;
+    }
+}
+.homescreen{
+    animation: fadeIn 1s;
+    animation-delay: 3s;
+}

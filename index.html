@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-    <div id="main">
+<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>
+    <div id="main" class="homescreen">
         <div id="header">
             <div id="logo">
                 <a href="index.html">
@@ -69,5 +70,10 @@
         <hr>
         <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
     </footer>
+<script>
+    function hide(){
+        document.getElementById("welcome").style.display="none";
+    }
+</script>
 </body>
 </html>
