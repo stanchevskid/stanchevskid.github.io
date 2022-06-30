@@ -8,8 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
-<video src="material/welcome.mp4" muted autoplay id="welcome" onended="hide()"></video>
-<div id="main" class="homescreen">
+<div id="main">
     <div id="header">
         <div id="logo">
             <a href="index.html">
@@ -85,7 +84,7 @@
         document.getElementById("welcome").style.display="none";
     }
     document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(years,4400)
+        setTimeout(years,500)
     });
     function years(){
         let valueDisplays=document.querySelectorAll(".num");

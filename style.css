@@ -427,6 +427,7 @@ video{
 .popup h3{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-weight: lighter;
 }
 .popup a, #box div a, #cv button{
     background-color: black;
