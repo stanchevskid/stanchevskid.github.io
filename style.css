@@ -97,7 +97,7 @@ body{
     animation-delay: 0.5s !important;
  }
 #typewriter-s h1{
-    animation: typing 1s steps(7, end) forwards,blink 1.5s infinite !important;
+    animation: typing 1s steps(6, end) forwards,blink 1.5s infinite !important;
 }
 #typewriter h1, #typewriter-s h1{
     overflow: hidden;
