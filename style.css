@@ -89,8 +89,8 @@ body{
     white-space: nowrap;
     font-size: 2.6em;
     width: 0;
-    animation-delay: 3s !important;
     animation: typing 4s steps(51, end) forwards,blink 1.5s infinite;
+    z-index: 100;
 }
 #welcome-container-a h1{
     animation-delay: 0.5s !important;
@@ -109,6 +109,7 @@ body{
 }
 #welcome-container span, #typewriter span, #typewriter-s span, #welcome-container-a span{
     display: inline-block;
+    z-index: 999;
 }
 @keyframes typing {
     from { width: 0; }
@@ -492,13 +493,15 @@ video{
     }
 }
 #welcome{
-    position: fixed;
+    position: absolute;
     right: 0;
-    bottom: 0;
+    bottom:0;
     width: 100vmax;
-    z-index: 150;
-    animation: left 1s;
-    animation-delay: 3s;
+    display: inline-block;
+    z-index: -50;
+    /*animation: left 1s;*/
+    /*animation-delay: 3s;*/
+    opacity: 0.5;
 }
 @keyframes left {
     from{
@@ -510,8 +513,7 @@ video{
     }
 }
 .homescreen{
-    animation: fadeIn 2s;
-    animation-delay: 3s;
+    animation: fadeIn 1s;
 }
 #qr-code{
     position: absolute;
@@ -521,7 +523,7 @@ video{
 }
 .welcome-home{
     height: 100vh;
-    animation: fadeIn 5s !important;
+    /*animation: fadeIn 5s !important;*/
 }
 .welcome-home h1{
     text-align: center;
