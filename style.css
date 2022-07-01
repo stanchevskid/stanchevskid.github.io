@@ -296,19 +296,19 @@ progress[value]::-webkit-progress-bar {
 #languages>div div:not(div:first-of-type){
     margin-top: 23px;
 }
-#strengths{
+.strengths{
     list-style: none;
     font-family: 'Montserrat', sans-serif;
     margin-left: -45px;
 }
-#strengths li{
+.strengths li{
     border: 1px black solid;
     display: inline-block;
     padding: 10px;
     border-radius: 20px;
     margin: 5px;
 }
-#strengths li:nth-of-type(2n){
+.strengths li:nth-of-type(2n){
     border: 1px #f43f44 solid;
 }
 #facebook, #mail, #github{
