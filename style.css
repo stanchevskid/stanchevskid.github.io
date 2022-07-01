@@ -184,7 +184,7 @@ body{
     background-color: rgb(255, 255, 255);
 }
 footer{
-    height: 100px;
+    height: 120px;
     background-color: white;
     /*position: absolute;*/
     /*bottom: 0;*/
@@ -506,4 +506,10 @@ video{
 .homescreen{
     animation: fadeIn 2s;
     animation-delay: 3s;
+}
+#qr-code{
+    position: absolute;
+    width: 4%;
+    right: 80px;
+    margin-top: 10px;
 }
