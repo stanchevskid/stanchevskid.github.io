@@ -210,7 +210,7 @@ footer p{
     text-align: center;
     margin-bottom: 10px;
 }
-#container-skills h2{
+#container-skills h2,#container-education h2{
     font-family: 'Montserrat', sans-serif;
     border-bottom: 5px solid #f43f44;
     display: inline-block;
@@ -220,6 +220,10 @@ footer p{
     font-family: 'Montserrat', sans-serif;
     width: 48%;
     display: inline-block;
+}
+#left-education a{
+    text-decoration: none;
+    color: black;
 }
 #left-education h3, #right-education h3{
     opacity: 85%;
