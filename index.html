@@ -27,14 +27,16 @@
         </ul>
     </div>
     <br>
-    <div id="welcome-container">
+    <div id="welcome-container" class="welcome-home">
             <span>
-                <h1>Hi, I'm <span style="color: #f43f44">Dejan</span>.
+                <h1>Hello, I'm <span style="color: #f43f44">Dejan</span>.
                 Welcome to my personal portfolio.</h1>
             </span>
         <br>
-
+        <a href="#here">SCROLL</a>
     </div>
+    <div id="here"></div>
+    <br><br><br><br>
     <div id="container">
 
         <div id="box">
@@ -42,8 +44,8 @@
             <br>
             <img src="images/dejan.png" alt="Photo of Dejan">
             <div>
-                <p>Lorem Ipsum is simply dummy <span style="color: #f43f44"> text</span> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <span style="color: #f43f44">It has survived not only </span>five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of <span style="color: #f43f44">Letraset </span>sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<!--                <img src="images/random-signature.png" alt="signature">-->
+                <p>An enthusiastic software engineer student based in Skopje, Macedonia. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.
+                </p>
                 <div id="box2">
                     <div>
                         <h2>AGE</h2>
@@ -90,7 +92,19 @@
         document.getElementById("welcome").style.display="none";
     }
     document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(years,4400)
+        setTimeout(scroll,8500);
+    });
+    function scroll(){
+        var my_element = document.getElementById("here");
+        my_element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+         setTimeout(years,9000);
     });
     function years(){
         let valueDisplays=document.querySelectorAll(".num");

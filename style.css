@@ -89,14 +89,14 @@ body{
     white-space: nowrap;
     font-size: 2.6em;
     width: 0;
-    animation-delay: 4.5s !important;
-    animation: typing 3s steps(48, end) forwards,blink 1.5s infinite;
+    animation-delay: 3s !important;
+    animation: typing 4s steps(51, end) forwards,blink 1.5s infinite;
 }
 #welcome-container-a h1{
     animation-delay: 0.5s !important;
  }
 #typewriter-s h1{
-    animation: typing 1s steps(6, end) forwards,blink 1.5s infinite !important;
+    animation: typing 1s steps(7, end) forwards,blink 1.5s infinite !important;
 }
 #typewriter h1, #typewriter-s h1{
     overflow: hidden;
@@ -105,7 +105,7 @@ body{
     font-size: 2.6em;
     width: 0;
     animation-delay: 0.5s !important;
-    animation: typing 1s steps(9, end) forwards,blink 1.5s infinite;
+    animation: typing 1s steps(10, end) forwards,blink 1.5s infinite;
 }
 #welcome-container span, #typewriter span, #typewriter-s span, #welcome-container-a span{
     display: inline-block;
@@ -124,6 +124,12 @@ body{
     margin: auto;
     padding-top: 60px;
     height: fit-content;
+}
+#box p{
+    font-family: "Source Code Pro", monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+
 }
 #box>div{
     float: right;
@@ -438,7 +444,7 @@ video{
     text-align: center;
     font-weight: lighter;
 }
-.popup a, #box div a, #cv button{
+.popup a, #box div a, #cv button, #welcome-container a{
     background-color: black;
     border-color: transparent;
     color: #f5f3f3;
@@ -452,7 +458,7 @@ video{
     text-decoration: none;
     text-align: center;
 }
-.popup a:hover, #box div a:hover, #cv button:hover{
+.popup a:hover, #box div a:hover, #cv button:hover, #welcome-container a:hover{
     background-color: #f43f44;
     transition: ease;
     transition-duration: 0.4s;
@@ -512,4 +518,18 @@ video{
     width: 4%;
     right: 80px;
     margin-top: 10px;
+}
+.welcome-home{
+    height: 100vh;
+    animation: fadeIn 5s !important;
+}
+.welcome-home h1{
+    text-align: center;
+    margin-top: 20%;
+}
+.welcome-home a{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    position: relative;
+    top:50px;
 }
