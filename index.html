@@ -33,18 +33,22 @@
                 Welcome to my personal portfolio.</h1>
             </span>
         <br>
-        <a href="#here">SCROLL</a>
+        <a href="#about">SCROLL</a>
     </div>
-    <div id="here"></div>
+    <div id="about">
     <br><br><br><br>
     <div id="container">
 
         <div id="box">
-            <h1>ABOUT ME</h1>
+            <div id="typewriter-h" class="about-me">
+            <span>
+                <h1 class="about-me">/about me</h1>
+            </span>
+            </div>
             <br>
             <img src="images/dejan.png" alt="Photo of Dejan">
             <div>
-                <p>An enthusiastic software engineer student based in Skopje, Macedonia. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.
+                <p>My name is <span style="color: #f43f44">Dejan Stanchevski</span>. An enthusiastic software engineer student based in Skopje, Macedonia. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.
                 </p>
                 <div id="box2">
                     <div>
@@ -63,6 +67,7 @@
                 <a href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">CV</a>
             </div>
         </div>
+    </div>
     </div>
 </div>
 <br>
@@ -89,19 +94,18 @@
 </footer>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(scroll,5500);
+        setTimeout(scroll,4500);
     });
     function scroll(){
-        var my_element = document.getElementById("here");
+        var my_element = document.getElementById("about");
         my_element.scrollIntoView({
             behavior: "smooth",
             block: "start",
             inline: "nearest"
         });
     }
-
     document.addEventListener("DOMContentLoaded", function() {
-         setTimeout(years,6500);
+         setTimeout(years,5500);
     });
     function years(){
         let valueDisplays=document.querySelectorAll(".num");
@@ -118,6 +122,10 @@
                 }
             }, duration);
         });
+    }
+    let item = document.getElementsByClassName("about-me");
+    if(isInViewport(item)) {
+        item.classList.add("animation");
     }
 </script>
 </body>

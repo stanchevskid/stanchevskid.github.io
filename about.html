@@ -25,39 +25,37 @@
             <li><a href="contact.html">Contact</a> </li>
         </ul>
     </div>
-    <br>
-    <div id="welcome-container-a">
+    <br><br><br><br>
+    <div id="about">
+        <div id="container">
+
+            <div id="box">
+                <div id="typewriter-a">
             <span>
-                <h1>Hello, I'm <span style="color: #f43f44">Dejan</span>.
-                Welcome to my personal portfolio.</h1>
+                <h1 class="about-me">/about me</h1>
             </span>
-        <br>
-
-    </div>
-    <div id="container">
-
-        <div id="box">
-            <h1>ABOUT ME</h1>
-            <br>
-            <img src="images/dejan.png" alt="Photo of Dejan">
-            <div>
-                <p>Lorem Ipsum is simply dummy <span style="color: #f43f44"> text</span> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <span style="color: #f43f44">It has survived not only </span>five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of <span style="color: #f43f44">Letraset </span>sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<!--                <img src="images/random-signature.png" alt="signature">-->
-                <div id="box2">
-                    <div>
-                        <h2>AGE</h2>
-                        <span class="num" data-val="19">0</span>
-                    </div>
-                    <div>
-                        <h2>LOCATION</h2>
-                        <span>MACEDONIA</span>
-                    </div>
-                    <div>
-                        <h2>GENDER</h2>
-                        <span>MALE</span>
-                    </div>
                 </div>
-                <a href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">CV</a>
+                <br>
+                <img src="images/dejan.png" alt="Photo of Dejan">
+                <div>
+                    <p>My name is <span style="color: #f43f44">Dejan Stanchevski</span>. An enthusiastic software engineer student based in Skopje, Macedonia. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.
+                    </p>
+                    <div id="box2">
+                        <div>
+                            <h2>AGE</h2>
+                            <span class="num" data-val="19">0</span>
+                        </div>
+                        <div>
+                            <h2>LOCATION</h2>
+                            <span>MACEDONIA</span>
+                        </div>
+                        <div>
+                            <h2>GENDER</h2>
+                            <span>MALE</span>
+                        </div>
+                    </div>
+                    <a href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">CV</a>
+                </div>
             </div>
         </div>
     </div>
@@ -85,11 +83,8 @@
     <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
 </footer>
 <script>
-    function hide(){
-        document.getElementById("welcome").style.display="none";
-    }
     document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(years,500)
+        years();
     });
     function years(){
         let valueDisplays=document.querySelectorAll(".num");
@@ -98,7 +93,7 @@
             let startValue=0;
             let endValue=parseInt(valueDisplay.getAttribute("data-val"));
             let duration = Math.floor(interval/endValue);
-            let counter=setInterval(function broenje(){
+            let counter=setInterval(function(){
                 startValue+=1;
                 valueDisplay.textContent=startValue;
                 if(startValue === endValue){
@@ -107,6 +102,7 @@
             }, duration);
         });
     }
+
 </script>
 </body>
 </html>
