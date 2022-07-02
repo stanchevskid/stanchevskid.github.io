@@ -438,8 +438,9 @@ video{
     height: 45%;
     background-color: white;
     position:absolute;
-    top: 5%;
-    left: 35%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0 0 20px rgb(0 0 0 / 5%);
     display: flex;
@@ -484,21 +485,22 @@ video{
     transition-duration: 0.4s;
 }
 .mess-logo{
-    position: fixed;
+    position:absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, -50%);
+}
+.mess-logo #logo h1{
+    margin-left: 0 !important;
 }
 #message-footer{
     position: fixed;
     left: 50%;
     bottom: 0;
-
     transform: translate(-50%, -50%);
 }
 #message-footer p{
     margin-top: 0;
-    margin-left: 50px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
