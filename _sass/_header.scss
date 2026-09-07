@@ -9,24 +9,13 @@
 }
 
 .site-header__bar {
+    @include liquid-glass;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.35rem 1.75rem;
     padding: 0.6rem 1.4rem;
-    border: 1px solid rgba(255, 255, 255, 0.55);
     border-radius: var(--radius-pill);
-    background: rgba(255, 255, 255, 0.35);
-    -webkit-backdrop-filter: saturate(1.9) blur(26px);
-    backdrop-filter: saturate(1.9) blur(26px);
-    box-shadow:
-        0 12px 40px rgba(29, 29, 31, 0.12),
-        inset 0 1px 0 var(--glass-highlight),
-        inset 0 -1px 0 var(--glass-border);
-}
-
-[data-theme="dark"] .site-header__bar {
-    background: rgba(28, 28, 30, 0.4);
 }
 
 .site-header__actions {
@@ -36,17 +25,17 @@
 }
 
 .nav-toggle {
+    @include liquid-glass;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     padding: 0;
-    border: 1px solid var(--glass-border);
+    border: none;
     border-radius: 50%;
-    background: var(--glass-bg);
     cursor: pointer;
 }
 
@@ -67,23 +56,21 @@
 }
 
 .theme-toggle {
-    position: relative;
+    @include liquid-glass;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     padding: 0;
-    border: 1px solid var(--glass-border);
+    border: none;
     border-radius: 50%;
-    background: var(--glass-bg);
     color: var(--color-text);
     cursor: pointer;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease;
 
     &:hover {
         transform: rotate(15deg) scale(1.1);
-        border-color: rgba(244, 63, 68, 0.4);
     }
 
     svg {
@@ -264,16 +251,12 @@
     .mobile-menu.is-open li:nth-child(4) { transition-delay: 0.22s; }
 
     .mobile-menu a {
+        @include liquid-glass;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
         padding: 0.7rem 1.3rem;
-        border: 1px solid var(--glass-border);
         border-radius: var(--radius-pill);
-        background: var(--glass-bg-strong);
-        -webkit-backdrop-filter: var(--glass-blur);
-        backdrop-filter: var(--glass-blur);
-        box-shadow: var(--shadow-card), inset 0 1px 0 var(--glass-highlight);
         color: var(--color-text);
         font-size: 1rem;
         font-weight: 600;
