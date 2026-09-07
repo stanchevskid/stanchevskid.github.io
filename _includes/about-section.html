@@ -1,12 +1,11 @@
 <section class="about card" id="about">
     {% include typewriter-heading.html text="/about me" %}
     <div class="about__content">
-        <div class="about__photo-frame reveal">
-            <img class="about__photo" src="/images/dejan.png" alt="Photo of Dejan" width="447" height="497">
-        </div>
-        <div class="about__bio">
-            <p class="reveal">My name is <span class="accent">Dejan Stanchevski</span> — a software engineer specialised in mobile engineering, based in Skopje, Macedonia. I work as a Mobile Engineer at Infinum. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.</p>
-            <ul class="stats reveal">
+        <div class="about__aside reveal">
+            <div class="about__photo-frame">
+                <img class="about__photo" src="/images/dejan.png" alt="Photo of Dejan" width="447" height="497">
+            </div>
+            <ul class="stats">
                 <li class="stat">
                     <span class="stat__value num" data-birthdate="2002-09-01">0</span>
                     <span class="stat__label">Age</span>
@@ -20,6 +19,11 @@
                     <span class="stat__label">Gender</span>
                 </li>
             </ul>
+        </div>
+        <div class="about__bio">
+            <p class="about__name reveal">Dejan Stanchevski</p>
+            <p class="about__role reveal">Software Engineer · Mobile</p>
+            <p class="reveal">I'm a software engineer specialised in mobile engineering, based in Skopje, Macedonia, working as a Mobile Engineer at Infinum. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.</p>
             <a class="button button--primary about__cv reveal" href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">Download CV</a>
         </div>
     </div>
