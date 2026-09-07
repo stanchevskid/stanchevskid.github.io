@@ -11,14 +11,30 @@
                 {% endfor %}
             </ul>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-            <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/>
-                <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.9 1.9M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>
-            </svg>
-            <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-            </svg>
-        </button>
+        <div class="site-header__actions">
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/>
+                    <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.9 1.9M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>
+                </svg>
+                <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+                </svg>
+            </button>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+        </div>
     </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+        <ul>
+            {% for item in site.data.navigation %}
+            <li>
+                <a href="{{ item.url }}"{% if page.url == item.url %} class="selected" aria-current="page"{% endif %}>{{ item.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
 </header>
+<div class="mobile-menu__backdrop" hidden></div>
