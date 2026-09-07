@@ -1,0 +1,14 @@
+<footer class="site-footer">
+    <div class="site-footer__card card">
+        <ul class="social-links">
+            {% for link in site.data.social %}
+            <li>
+                <a href="{{ link.url }}"{% unless link.url contains "mailto:" %} target="_blank" rel="noopener"{% endunless %} aria-label="{{ link.name }}">
+                    <img src="{{ link.icon }}" alt="{{ link.name }} icon">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <p>&copy; Dejan Stanchevski, {{ site.time | date: "%Y" }}. Crafted in Skopje.</p>
+    </div>
+</footer>

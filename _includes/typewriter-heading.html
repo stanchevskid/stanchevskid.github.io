@@ -1,0 +1,4 @@
+{% assign step_count = include.text | size %}
+<div class="typewriter" style="--typing-steps: {{ step_count }};{% if include.delay %} --typing-delay: {{ include.delay }};{% endif %}">
+    <span><h1>{{ include.text }}</h1></span>
+</div>

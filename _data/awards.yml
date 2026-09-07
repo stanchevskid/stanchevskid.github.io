@@ -1,0 +1,16 @@
+- name: GPA award for fourth year of studies in the academic year 2024/25
+  issuer: Faculty of Computer Science and Engineering - Skopje
+  date: March 2026
+  gpa: 9.88/10.00
+- name: GPA award for third year of studies in the academic year 2023/24
+  issuer: Faculty of Computer Science and Engineering - Skopje
+  date: March 2025
+  gpa: 9.87/10.00
+- name: GPA award for second year of studies in the academic year 2022/23
+  issuer: Faculty of Computer Science and Engineering - Skopje
+  date: April 2024
+  gpa: 9.80/10.00
+- name: GPA award for first year of studies in the academic year 2021/22
+  issuer: Faculty of Computer Science and Engineering - Skopje
+  date: March 2023
+  gpa: 9.90/10.00

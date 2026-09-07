@@ -1,0 +1,190 @@
+.accent {
+    color: var(--color-accent);
+}
+
+.card {
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-card);
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-card), inset 0 1px 0 var(--glass-highlight);
+    transition: background-color 0.4s ease;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(29, 29, 31, 0.18);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+.button--primary {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 0 8px 22px rgba(244, 63, 68, 0.28);
+
+    &:hover {
+        background-color: var(--color-accent-strong);
+        box-shadow: 0 14px 30px rgba(244, 63, 68, 0.35);
+    }
+}
+
+.button--glass {
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg-strong);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    color: var(--color-text);
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        width: 1.5rem;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--color-accent);
+    }
+}
+
+.resume,
+.skills {
+    counter-reset: section;
+
+    .eyebrow::before {
+        counter-increment: section;
+        content: counter(section, decimal-leading-zero);
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: none;
+        color: var(--color-accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+    }
+}
+
+.typewriter {
+    margin-top: 3rem;
+    font-family: var(--font-mono);
+    text-align: center;
+
+    span {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    h1 {
+        width: 0;
+        margin: 0.4em 0;
+        overflow: hidden;
+        border-right: 0.08em solid var(--color-text);
+        font-size: clamp(2rem, 6vw, 3rem);
+        font-weight: 400;
+        white-space: nowrap;
+        animation:
+            typing var(--typing-duration, 1s) steps(var(--typing-steps, 10), end) var(--typing-delay, 0.5s) forwards,
+            blink 1.5s infinite;
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: var(--color-text); }
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 9px 18px;
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-pill);
+        background: var(--glass-bg);
+        -webkit-backdrop-filter: var(--glass-blur);
+        backdrop-filter: var(--glass-blur);
+        box-shadow: var(--shadow-soft);
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            border-color: rgba(244, 63, 68, 0.4);
+            box-shadow: 0 10px 24px rgba(29, 29, 31, 0.1);
+        }
+    }
+}
+
+.js .reveal {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    transition:
+        opacity 0.7s ease var(--reveal-delay, 0s),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0s),
+        filter 0.7s ease var(--reveal-delay, 0s);
+
+    &.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .typewriter h1 {
+        width: auto;
+        border-right: none;
+        white-space: normal;
+        animation: none;
+    }
+}

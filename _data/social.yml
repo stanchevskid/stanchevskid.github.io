@@ -1,0 +1,9 @@
+- name: Facebook
+  url: https://www.facebook.com/dejan.stanchevski
+  icon: /images/facebook-icon.png
+- name: GitHub
+  url: https://github.com/stanchevskid
+  icon: /images/github.png
+- name: E-mail
+  url: mailto:stanchevskidejan@gmail.com
+  icon: /images/mail-icon.png

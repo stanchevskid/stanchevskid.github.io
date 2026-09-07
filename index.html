@@ -1,132 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Dejan Stanchevski's Personal Portfolio">
-    <meta name="keywords" content="HTML, CSS, Dejan, Stanchevski, Dejan Stanchevski, Portfolio, CV">
-    <meta name="author" content="Dejan Stanchevski">
-    <title>Dejan Stanchevski - About</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-</head>
-<body>
-<div id="main" class="homescreen">
-    <div id="header">
-        <div id="logo">
-            <a href="index.html">
-                <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
-            </a>
+---
+layout: default
+title: Dejan Stanchevski - Portfolio
+body_class: page-home
+---
+<section class="hero">
+    <div class="hero__inner">
+        <p class="hero__eyebrow reveal">Mobile Engineer</p>
+        <div class="typewriter hero__title" style="--typing-steps: 17; --typing-duration: 1.2s; --typing-delay: 0.3s;">
+            <span><h1>Hello, I'm <span class="accent">Dejan</span>.</h1></span>
         </div>
-        <ul>
-            <li><a class="selected" href="about.html">About</a> </li>
-            <li><a href="education.html">Education</a> </li>
-            <li><a href="skills.html">Skills</a> </li>
-            <li><a href="contact.html">Contact</a> </li>
-        </ul>
-    </div>
-    <br>
-    <div id="welcome-container" class="welcome-home">
-            <video src="material/welcome.mp4" muted autoplay id="welcome" loop></video>
-            <span>
-                <h1>Hello, I'm <span style="color: #f43f44">Dejan</span>.
-                Welcome to my personal portfolio.</h1>
-            </span>
-        <br>
-        <a href="#about">SCROLL</a>
-    </div>
-    <div id="about">
-    <br><br><br><br>
-    <div id="container">
-
-        <div id="box">
-            <div id="typewriter-h" class="about-me">
-            <span>
-                <h1 class="about-me">/about me</h1>
-            </span>
-            </div>
-            <br>
-            <img src="images/dejan.png" alt="Photo of Dejan">
-            <div>
-                <p>My name is <span style="color: #f43f44">Dejan Stanchevski</span>. An enthusiastic software engineer student based in Skopje, Macedonia. I don’t like to define myself by the work I’ve done. I define myself by the work I want to do. I prefer to keep learning and continue challenging myself.
-                </p>
-                <div id="box2">
-                    <div>
-                        <h2>AGE</h2>
-                        <span class="num" data-val="20">0</span>
-                    </div>
-                    <div>
-                        <h2>LOCATION</h2>
-                        <span>MACEDONIA</span>
-                    </div>
-                    <div>
-                        <h2>GENDER</h2>
-                        <span>MALE</span>
-                    </div>
-                </div>
-                <a href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">CV</a>
-            </div>
+        <p class="hero__sub reveal" style="--reveal-delay: 1.3s;">Software engineer specialised in mobile engineering,<br> based in Skopje, Macedonia.</p>
+        <div class="hero__actions reveal" style="--reveal-delay: 1.6s;">
+            <a class="button button--primary" href="/material/CV%20Dejan%20Stanchevski.pdf" target="_blank">View CV</a>
+            <a class="button button--glass" href="/contact.html">Get in touch</a>
         </div>
     </div>
-    </div>
-</div>
-<br>
-<footer>
-    <img src="images/stanchevskid.svg"  id="qr-code" alt="qr code to my linktree"/>
-    <br>
-    <div>
-        <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
-            <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/stanchevskid" target="_blank" id="github">
-            <img src="images/github.png" alt="github icon " width="30px">
-        </a>
-    </div>
-    <div>
-        <a href="mailto:stanchevskidejan@gmail.com">
-            <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
-        </a>
-    </div>
-    <hr>
-    <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
-</footer>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(scroll,4500);
-    });
-    function scroll(){
-        var my_element = document.getElementById("about");
-        my_element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest"
-        });
-    }
-    document.addEventListener("DOMContentLoaded", function() {
-         setTimeout(years,5500);
-    });
-    function years(){
-        let valueDisplays=document.querySelectorAll(".num");
-        let interval=2000;
-        valueDisplays.forEach((valueDisplay)=>{
-            let startValue=0;
-            let endValue=parseInt(valueDisplay.getAttribute("data-val"));
-            let duration = Math.floor(interval/endValue);
-            let counter=setInterval(function(){
-                startValue+=1;
-                valueDisplay.textContent=startValue;
-                if(startValue === endValue){
-                    clearInterval(counter);
-                }
-            }, duration);
-        });
-    }
-    let item = document.getElementsByClassName("about-me");
-    if(isInViewport(item)) {
-        item.classList.add("animation");
-    }
-</script>
-</body>
-</html>
+    <a class="hero__scroll" href="#about" aria-label="Scroll to the about section"></a>
+</section>
+{% include about-section.html %}

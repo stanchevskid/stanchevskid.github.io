@@ -1,143 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <meta charset="UTF-8">
-    <title>Dejan - Education</title>
-    <meta name="description" content="Dejan Stanchevski's Personal Portfolio">
-    <meta name="keywords" content="HTML, CSS, Dejan, Stanchevski, Dejan Stanchevski, Portfolio, CV">
-    <meta name="author" content="Dejan Stanchevski">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-</head>
-<body>
-<div id="main">
-    <div id="header">
-        <div id="logo">
-            <a href="index.html">
-                <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
-            </a>
-        </div>
-        <ul>
-            <li><a href="about.html">About</a> </li>
-            <li><a href="education.html" class="selected">Education</a> </li>
-            <li><a href="skills.html">Skills</a> </li>
-            <li><a href="contact.html">Contact</a> </li>
+---
+layout: default
+title: Dejan Stanchevski - Resume
+body_class: page-resume
+---
+{% include typewriter-heading.html text="/resume" %}
+<div class="resume">
+    <section class="resume-section">
+        <h2 class="eyebrow reveal">Work experience</h2>
+        <ol class="timeline" data-stagger>
+            {% for job in site.data.experience %}
+            <li class="timeline__item card reveal">
+                <p class="timeline__period">{{ job.period }}</p>
+                <h3>{{ job.role }}</h3>
+                <p class="timeline__org"><strong>{{ job.company }}</strong> &middot; {{ job.location }}</p>
+            </li>
+            {% endfor %}
+        </ol>
+    </section>
+
+    <section class="resume-section">
+        <h2 class="eyebrow reveal">Education</h2>
+        <ol class="timeline" data-stagger>
+            {% for entry in site.data.education %}
+            <li class="timeline__item card reveal">
+                <p class="timeline__period">{{ entry.period }}</p>
+                <h3>{% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.school }}</a>{% else %}{{ entry.school }}{% endif %}</h3>
+                <p class="timeline__org">{{ entry.org }}</p>
+                {% if entry.details %}
+                <ul class="timeline__details">
+                    {% for detail in entry.details %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ol>
+    </section>
+
+    <section class="resume-section">
+        <h2 class="eyebrow reveal">Honors &amp; awards</h2>
+        <ul class="cert-grid" data-stagger>
+            {% for award in site.data.awards %}
+            <li class="cert-card card reveal">
+                <span class="cert-card__badge">GPA {{ award.gpa }}</span>
+                <p class="cert-card__name">{{ award.name }}</p>
+                <p class="cert-card__issuer">{{ award.issuer }} &middot; {{ award.date }}</p>
+            </li>
+            {% endfor %}
         </ul>
-    </div>
-    <br>
-    <div id="typewriter">
-            <span>
-                <h1>/education</h1>
-            </span>
-        <br>
+    </section>
 
-    </div>
-    <div id="container-education">
-        <div id="left-education">
-            <h3>October 2021 - Present</h3>
-            <p><a href="https://finki.ukim.mk/en">Faculty of Computer Science and Engineering</a></p>
-            <p>Ss. Cyril and Methodius University, Skopje, North Macedonia;</p>
-
-            <ul>
-                <li>At second year of studies</li>
-                <li>Program: Software Engineering and Information Systems</li>
-            </ul>
-        </div>
-        <div id="right-education">
-            <h3>September 2017 - June 2021</h3>
-            <p>High School SSCS Georgi Dimitrov, Skopje</p>
-            <p>four year gymnasium education, September 2017- June 2021</p>
-
-            <ul>
-                <li>High School diploma with graduation rate 5.00</li>
-            </ul>
-        </div>
-        <br>
-        <div id="certificates">
-            <h2>CERTIFICATES</h2>
-            <br>
-            <ul>
-                <li>
-                    <dl>Cambridge English Certificate in Advanced English (Council of Europe Level C1)</dl>
-                    <dd>Cambridge Assessment English, October 2020</dd>
-                </li>
-                <li>
-                    <dl>Microsoft Office Specialist for Office Word 2016</dl>
-                    <dd>Microsoft Office Specialist, October 2020</dd>
-
-                </li>
-                <li>
-                    <dl>Second place on Macedonian national competition MOS (Microsoft Office Specialist) 2020</dl>
-                    <dd>Certiadria, October 2020</dd>
-                </li>
-                <li>
-                    <dl>Cambridge First Certificate in English (Performance at Grade A and ability at Level 2* and Council of Europe Level C1)</dl>
-                    <dd>Cambridge Assessment English, July 2019</dd>
-                </li>
-                <li>
-                    <dl>Basics of JavaScript</dl>
-                    <dd>Semos Education, November 2018</dd>
-                </li>
-                <li>
-                    <dl>Programming in C++</dl>
-                    <dd>Semos Education, June 2018</dd>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <dl>Microsoft Office Specialist for Office Word 2013</dl>
-                    <dd>Microsoft Office Specialist, May 2018</dd>
-                </li>
-                <li>
-                    <dl>Adobe Premiere Pro</dl>
-                    <dd>Semos Education, December 2017</dd>
-                </li>
-
-                <li>
-                    <dl>Adobe After Effects CC</dl>
-                    <dd>Semos Education, May 2017</dd>
-                </li>
-
-                <li>
-                    <dl>Basics of HTML&CSS</dl>
-                    <dd>Semos Education, December 2016</dd>
-                </li>
-
-                <li>
-                    <dl>Certificate for fine-art photography</dl>
-                    <dd>Ministry of Culture of the Republic of Macedonia, Children’s Fine Arts Centre, April 2016</dd>
-                </li>
-
-                <li>
-                    <dl>Environmental action on thesis “Waste Recycling”</dl>
-                    <dd>Euro-Ekopak, March 2015</dd>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <section class="resume-section">
+        <h2 class="eyebrow reveal">Certificates</h2>
+        <ul class="cert-grid" data-stagger>
+            {% for cert in site.data.certificates %}
+            <li class="cert-card card reveal">
+                <p class="cert-card__name">{{ cert.name }}</p>
+                <p class="cert-card__issuer">{{ cert.issuer }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>
-<br>
-<footer>
-    <img src="images/stanchevskid.svg"  id="qr-code" alt="qr code to my linktree"/>
-    <br>
-    <div>
-        <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
-            <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/stanchevskid" target="_blank" id="github">
-            <img src="images/github.png" alt="github icon " width="30px">
-        </a>
-    </div>
-    <div>
-        <a href="mailto:stanchevskidejan@gmail.com">
-            <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
-        </a>
-    </div>
-    <hr>
-    <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
-</footer>
-</body>
-</html>

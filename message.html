@@ -1,43 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Dejan Stanchevski's Personal Portfolio">
-    <meta name="keywords" content="HTML, CSS, Dejan, Stanchevski, Dejan Stanchevski, Portfolio, CV">
-    <meta name="author" content="Dejan Stanchevski">
-    <title>Thank you!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-</head>
-<body>
-<div id="main">
-    <div class="popup">
-        <div>
-            <div>
-                <img src="images/tick.png">
-            </div>
-            <div>
-                <h1>THANK YOU!</h1>
-            </div>
-            <h3>Your message has been successfully sent! <br>I'll write back to you as soon as possible.</h3>
-            <div>
-                <a href="index.html">HOME</a>
-            </div>
-        </div>
-    </div>
-    <div class="mess-logo">
-            <div id="logo" >
-                <a href="index.html">
-                    <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
-                </a>
-            </div>
-    </div>
-    <br>
-    <div id="message-footer">
-        <hr>
-        <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
-    </div>
-</div>
-</body>
-</html>
+---
+layout: default
+title: Thank you!
+body_class: page-message
+---
+<section class="popup card reveal">
+    <img class="popup__icon" src="/images/tick.png" alt="">
+    <h1>Thank you!</h1>
+    <p>Your message has been successfully sent!<br>I'll write back to you as soon as possible.</p>
+    <a class="button button--primary" href="/">Back home</a>
+</section>

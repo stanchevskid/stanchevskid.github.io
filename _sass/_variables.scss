@@ -1,0 +1,61 @@
+:root {
+    color-scheme: light;
+
+    --color-accent: #f43f44;
+    --color-accent-strong: #dd3237;
+    --color-accent-soft: rgba(244, 63, 68, 0.1);
+    --color-bg: #f5f5f7;
+    --color-surface: #ffffff;
+    --color-text: #1d1d1f;
+    --color-muted: #6e6e73;
+    --color-hairline: rgba(0, 0, 0, 0.08);
+    --color-ice: #caebf2;
+
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-bg-strong: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.75);
+    --glass-blur: saturate(1.8) blur(22px);
+    --glass-highlight: rgba(255, 255, 255, 0.85);
+    --shadow-card: 0 20px 50px rgba(29, 29, 31, 0.08);
+    --shadow-lift: 0 26px 60px rgba(29, 29, 31, 0.14);
+    --shadow-soft: 0 6px 18px rgba(29, 29, 31, 0.06);
+
+    --social-bg: #1d1d1f;
+    --input-bg: rgba(255, 255, 255, 0.75);
+    --meter-track: rgba(29, 29, 31, 0.08);
+    --nav-pill-bg: rgba(255, 255, 255, 0.85);
+
+    --radius-card: 24px;
+    --radius-tile: 18px;
+    --radius-pill: 999px;
+
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Source Code Pro', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --content-max-width: 68rem;
+    --header-clearance: 6.5rem;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-accent-soft: rgba(244, 63, 68, 0.18);
+    --color-bg: #131316;
+    --color-surface: #1d1d1f;
+    --color-text: #f5f5f7;
+    --color-muted: #a1a1a6;
+    --color-hairline: rgba(255, 255, 255, 0.12);
+
+    --glass-bg: rgba(28, 28, 30, 0.55);
+    --glass-bg-strong: rgba(28, 28, 30, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --glass-highlight: rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 20px 50px rgba(0, 0, 0, 0.45);
+    --shadow-lift: 0 26px 60px rgba(0, 0, 0, 0.55);
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.35);
+
+    --social-bg: rgba(255, 255, 255, 0.14);
+    --input-bg: rgba(28, 28, 30, 0.85);
+    --meter-track: rgba(255, 255, 255, 0.12);
+    --nav-pill-bg: rgba(255, 255, 255, 0.14);
+}

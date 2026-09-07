@@ -1,117 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="description" content="Dejan Stanchevski's Personal Portfolio">
-    <meta name="keywords" content="HTML, CSS, Dejan, Stanchevski, Dejan Stanchevski, Portfolio, CV">
-    <meta name="author" content="Dejan Stanchevski">
-    <title>Dejan - Skills</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-</head>
-<body>
-<div id="main">
-    <div id="header">
-        <div id="logo">
-            <a href="index.html">
-                <h1><span>DEJAN</span><span> STANCHEVSKI</span></h1>
-            </a>
-        </div>
-        <ul>
-            <li><a href="about.html">About</a> </li>
-            <li><a href="education.html" >Education</a> </li>
-            <li><a href="skills.html" class="selected">Skills</a> </li>
-            <li><a href="contact.html" >Contact</a> </li>
+---
+layout: default
+title: Dejan Stanchevski - Skills
+body_class: page-skills
+---
+{% include typewriter-heading.html text="/skills" %}
+<div class="skills">
+    <section>
+        <h2 class="eyebrow reveal">Language skills</h2>
+        <ul class="languages" data-stagger>
+            {% for language in site.data.languages %}
+            <li class="language card reveal">
+                <div class="language__row">
+                    <h3>{{ language.name }}</h3>
+                    <span class="language__value">{{ language.level }}%</span>
+                </div>
+                <div class="meter" role="progressbar" aria-valuenow="{{ language.level }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ language.name }}">
+                    <div class="meter__fill" style="--meter-value: {{ language.level }}%"></div>
+                </div>
+            </li>
+            {% endfor %}
         </ul>
-    </div>
-    <br>
-    <div id="typewriter-s">
-            <span>
-                <h1>/skills</h1>
-            </span>
-        <br>
-
-    </div>
-    <div id="container-skills">
-        <div id="languages">
-            <h2>LANGUAGE SKILLS:</h2>
-            <br>
-            <div>
-                <div>
-                    <h3>Macedonian (mother tongue)</h3>
-                    <progress value="100" max="100"> 100% </progress>
-                </div>
-                <div>
-                    <h3>English</h3>
-                    <progress value="100" max="100"> 100% </progress>
-                </div>
-                <div>
-                    <h3>Serbian</h3>
-                    <progress value="100" max="100"> 100% </progress>
-                </div>
-                <div>
-                    <h3>Croatian</h3>
-                    <progress value="100" max="100"> 100% </progress>
-                </div>
-                <div>
-                    <h3>German</h3>
-                    <progress value="65" max="100"> 65% </progress>
-                </div>
-            </div>
-
-        </div>
-        <div id="skills">
-            <h2>KEY STRENGTHS</h2>
-            <ul class="strengths">
-                <li>Excellent Communication Skills</li>
-                <li>Creative and Logical Thinking</li>
-                <li>Organise, Accurate and Detail oriented</li>
-                <li>Teamwork and Collaborative Skills</li>
-                <li>Leadership and Management Skills</li>
-                <li>Problem-solving skills</li>
-                <li>Willing to do work in a challenging, dynamic and schedule-shifting environment</li>
-                <li>Multitasking</li>
-                <li>Fast learner with a positive attitude</li>
-                <li>Ability to be persistent in the face of difficult problems or challenges</li>
-                <li>Positive personality</li>
-            </ul>
-        </div>
-        <br>
-        <div id="hobbies">
-            <h2>HOBBIES</h2>
-                <ul class="strengths">
-                    <li>Photography</li>
-                    <li>Graphic Design</li>
-                    <li>Programming</li>
-                    <li>Tennis</li>
-                    <li>Swimming</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </section>
+    <section>
+        <h2 class="eyebrow reveal">Key strengths</h2>
+        <ul class="chips" data-stagger>
+            <li class="reveal">Excellent Communication Skills</li>
+            <li class="reveal">Creative and Logical Thinking</li>
+            <li class="reveal">Organise, Accurate and Detail oriented</li>
+            <li class="reveal">Teamwork and Collaborative Skills</li>
+            <li class="reveal">Leadership and Management Skills</li>
+            <li class="reveal">Problem-solving skills</li>
+            <li class="reveal">Willing to do work in a challenging, dynamic and schedule-shifting environment</li>
+            <li class="reveal">Multitasking</li>
+            <li class="reveal">Fast learner with a positive attitude</li>
+            <li class="reveal">Ability to be persistent in the face of difficult problems or challenges</li>
+            <li class="reveal">Positive personality</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="eyebrow reveal">Hobbies</h2>
+        <ul class="chips" data-stagger>
+            <li class="reveal">Photography</li>
+            <li class="reveal">Graphic Design</li>
+            <li class="reveal">Programming</li>
+            <li class="reveal">Tennis</li>
+            <li class="reveal">Swimming</li>
+        </ul>
+    </section>
 </div>
-<br>
-<footer>
-    <img src="images/stanchevskid.svg"  id="qr-code" alt="qr code to my linktree"/>
-    <br>
-    <div>
-        <a href="https://www.facebook.com/dejan.stanchevski" target="_blank" id="facebook">
-            <img src="images/facebook-icon.png" width="30px" alt="facebook icon">
-        </a>
-    </div>
-    <div>
-        <a href="https://github.com/stanchevskid" target="_blank" id="github">
-            <img src="images/github.png" alt="github icon " width="30px">
-        </a>
-    </div>
-    <div>
-        <a href="mailto:stanchevskidejan@gmail.com">
-            <img src="images/mail-icon.png" alt="gmail icon" width="30px" id="mail">
-        </a>
-    </div>
-    <hr>
-    <p>	&copy; Copyright Dejan Stanchevski. 2022</p>
-</footer>
-</body>
-</html>

@@ -1,0 +1,11 @@
+title: Dejan Stanchevski
+description: Dejan Stanchevski's Personal Portfolio
+url: https://stanchevskid.github.io
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - .idea
+  - README.md

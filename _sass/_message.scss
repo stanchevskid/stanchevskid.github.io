@@ -1,0 +1,32 @@
+.page-message main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.popup {
+    width: 100%;
+    max-width: 460px;
+    padding: 2.75rem 2rem;
+    text-align: center;
+
+    h1 {
+        margin: 0.75rem 0 0.5rem;
+        font-size: clamp(1.9rem, 6vw, 2.4rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        margin: 0 0 1.75rem;
+        color: var(--color-muted);
+    }
+}
+
+.popup__icon {
+    display: block;
+    width: 64px;
+    height: auto;
+    margin: 0 auto;
+}

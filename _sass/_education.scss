@@ -1,0 +1,142 @@
+.resume {
+    max-width: var(--content-max-width);
+    margin: 1.5rem auto 0;
+    padding: 0 1.25rem;
+}
+
+.resume-section {
+    margin-bottom: 4.5rem;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0 0 0 28px;
+    list-style: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        bottom: 12px;
+        left: 4px;
+        width: 1px;
+        background: var(--color-hairline);
+    }
+}
+
+.timeline__item {
+    position: relative;
+    padding: 1.5rem 1.75rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 1.9rem;
+        left: -28px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-accent-soft);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lift), inset 0 1px 0 var(--glass-highlight);
+    }
+
+    h3 {
+        margin: 0.35rem 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}
+
+.timeline__period {
+    margin: 0;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.timeline__org {
+    margin: 0;
+    color: var(--color-muted);
+
+    a {
+        color: inherit;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+}
+
+.timeline__details {
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cert-card {
+    padding: 1.25rem 1.4rem;
+    border-radius: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: rgba(244, 63, 68, 0.35);
+        box-shadow: var(--shadow-lift), inset 0 1px 0 var(--glass-highlight);
+    }
+}
+
+.cert-card__badge {
+    display: inline-block;
+    margin-bottom: 0.7rem;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 400;
+}
+
+.cert-card__name {
+    margin: 0 0 0.45rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.cert-card__issuer {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 0.88rem;
+}
